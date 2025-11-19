@@ -47,12 +47,14 @@ const Founders = () => {
         <h2 className="text-4xl font-bold gradient-text">Kurucular</h2>
         <p className="mt-4 text-gray-300">Disiplinler arası yaklaşım ile inovasyonu uçtan uca yöneten çekirdek ekip.</p>
       </div>
+      // ...existing code...
       <div className="grid md:grid-cols-2 gap-10">
         {founders.map((f,i)=>(
-          <motion.div key={f.name} initial={{opacity:0, y:30}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:i*0.2}} className="glass rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
-            <img src={f.img} alt={f.name} className="w-40 h-40 object-cover rounded-2xl ring-2 ring-brand-500/40" />
+          <motion.div key={f.name} initial={{opacity:0, y:30}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:i*0.2}} className="glass rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
+            <img src={f.img} alt={f.name} className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full md:rounded-2xl ring-4 ring-brand-500/20 shadow-xl mx-auto md:mx-0" />
             <div>
               <h3 className="text-2xl font-semibold">{f.name}</h3>
+// ...existing code...
               <p className="mt-1 text-brand-300 text-sm uppercase tracking-wider font-medium">{f.title}</p>
               <p className="mt-4 text-gray-300 text-sm leading-relaxed">{f.bio}</p>
               <div className="mt-4 flex flex-wrap items-center gap-3 text-xs">
