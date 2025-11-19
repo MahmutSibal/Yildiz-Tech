@@ -38,7 +38,7 @@ const Services = () => {
   return (
     <section id="services" className="relative py-32 px-6 max-w-7xl mx-auto">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-4xl font-bold gradient-text">Hizmetlerimiz</h2>
+        <h2 className="text-4xl text-gray-300 font-bold gradient-text">Hizmetlerimiz</h2>
         <p className="mt-4 text-gray-300">Ürün yaşam döngünüzün her aşamasını kapsayan uçtan uca teknoloji uzmanlığı.</p>
       </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@ const Services = () => {
                     {s.bullets.map(b=>(<li key={b}>{b}</li>))}
                   </ul>
                 )}
-                <a href="https://wa.me/905521643855?text=Merhaba%2C%20hizmetleriniz%20hakk%C4%B1nda%20teklif%20almak%20istiyorum." target="_blank" rel="noreferrer" aria-label="WhatsApp ile teklif al" className="mt-6 inline-block px-4 py-2 rounded bg-[#1d7eff] text-white text-sm">Teklif Al</a>
+                <a href="https://api.whatsapp.com/send?phone=905521643855&text=Merhaba%2C%20hizmetleriniz%20hakk%C4%B1nda%20teklif%20almak%20istiyorum." target="_blank" rel="noreferrer" aria-label="WhatsApp ile teklif al" className="mt-6 inline-block px-4 py-2 rounded bg-[#1d7eff] text-white text-sm">Teklif Al</a>
               </motion.div>
             ))}
           </div>

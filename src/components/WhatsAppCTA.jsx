@@ -6,7 +6,7 @@ const MSG = encodeURIComponent('Merhaba, hizmetleriniz hakkında teklif almak is
 const WhatsAppCTA = () => {
   return (
     <a
-      href={`https://wa.me/${PHONE}?text=${MSG}`}
+      href={`https://api.whatsapp.com/send?phone=${PHONE}&text=${MSG}`}
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-4 right-4 z-50 px-4 py-3 rounded-full shadow-lg bg-green-500 hover:bg-green-400 text-white text-sm font-medium flex items-center gap-2"

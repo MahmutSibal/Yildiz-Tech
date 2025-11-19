@@ -4,14 +4,11 @@ import mahmutImg from '../../Photos/mahmut.jpeg';
 import muhhametImg from '../../Photos/muhhamet.jpeg';
 import yildizImg from '../../Photos/yıldız.jpeg';
 
-// Tüm WhatsApp yönlendirmeleri işletme numarasına sabitlendi
-const BUSINESS_WHATSAPP = '905521643855';
-
 const founders = [
   {
     name: 'Mahmut Sibal',
     title: 'Yapay Zeka Destekli Programlama Uzmanı',
-  img: mahmutImg,
+    img: mahmutImg,
     email: 'mahmutsibal9@gmail.com',
     phone: '+90 536 898 38 55',
     linkedin: 'https://www.linkedin.com/in/mahmut-sibal-980a17368/',
@@ -21,9 +18,9 @@ const founders = [
   {
     name: 'Muhammet Öner',
     title: 'Ürün & İş Geliştirme Yöneticisi',
-  img: muhhametImg,
+    img: muhhametImg,
     email: 'muhammet@example.com',
-    phone: '',
+    phone: '+90 546 153 21 18',
     linkedin: 'https://www.linkedin.com/in/muhammet-%C3%B6ner-b245a9302?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     github: 'https://github.com/muhammetoner',
     bio: 'Strateji, ürün yönetimi ve müşteri odaklı çözümler geliştirmede deneyimli lider.'
@@ -31,7 +28,7 @@ const founders = [
   {
     name: 'Yıldız Uçucu',
     title: 'Gömülü Yazılım Sistemler Uzmanı',
-  img: yildizImg,
+    img: yildizImg,
     email: 'ucucuyildiz21@gmail.com',
     phone: '+90 535 309 74 36',
     linkedin: 'https://www.linkedin.com/in/y%C4%B1ld%C4%B1zucucu2112?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
@@ -47,19 +44,19 @@ const Founders = () => {
         <h2 className="text-4xl font-bold gradient-text">Kurucular</h2>
         <p className="mt-4 text-gray-300">Disiplinler arası yaklaşım ile inovasyonu uçtan uca yöneten çekirdek ekip.</p>
       </div>
-      // ...existing code...
       <div className="grid md:grid-cols-2 gap-10">
         {founders.map((f,i)=>(
           <motion.div key={f.name} initial={{opacity:0, y:30}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:i*0.2}} className="glass rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
-            <img src={f.img} alt={f.name} className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full md:rounded-2xl ring-4 ring-brand-500/20 shadow-xl mx-auto md:mx-0" />
+            <img src={f.img} alt={f.name} className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg ring-4 ring-brand-500/20 shadow-xl mx-auto md:mx-0" />
             <div>
               <h3 className="text-2xl font-semibold">{f.name}</h3>
-// ...existing code...
               <p className="mt-1 text-brand-300 text-sm uppercase tracking-wider font-medium">{f.title}</p>
               <p className="mt-4 text-gray-300 text-sm leading-relaxed">{f.bio}</p>
-              <div className="mt-4 flex flex-wrap items-center gap-3 text-xs">
+              <div className="mt-4 flex flex-wrap items-center gap-3 text-xs justify-center md:justify-start">
                 <a href={`mailto:${f.email}`} className="px-3 py-1.5 rounded-md bg-white/5 border border-white/10 hover:border-brand-400 transition">E-posta</a>
-                <a href={`https://wa.me/${BUSINESS_WHATSAPP}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-brand-500/10 border border-brand-500/40 text-brand-300 hover:bg-brand-500/20 transition">WhatsApp</a>
+                {f.phone && (
+                  <a href={`https://api.whatsapp.com/send?phone=${f.phone.replace(/\D/g,'')}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-brand-500/10 border border-brand-500/40 text-brand-300 hover:bg-brand-500/20 transition">WhatsApp</a>
+                )}
                 <a href={f.linkedin} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-white/5 border border-white/10 hover:border-brand-400 transition">LinkedIn</a>
                 <a href={f.github} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-white/5 border border-white/10 hover:border-brand-400 transition">GitHub</a>
               </div>
