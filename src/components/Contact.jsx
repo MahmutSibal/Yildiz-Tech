@@ -1,6 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
+// İşletme WhatsApp sabit numarası
+const BUSINESS_WHATSAPP = '905521643855';
+// Muhammet arkadaş numarası (tel erişim için)
+const MUHAMMET_TEL = '+90 546 153 21 18';
+
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -77,9 +82,10 @@ const Contact = () => {
           <motion.div initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} className="glass rounded-2xl p-6">
             <h3 className="font-semibold text-lg mb-2">Hızlı Erişim</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><span className="text-white">Genel WhatsApp:</span> <a className="text-brand-300 hover:underline" href="https://wa.me/905521643855" target="_blank" rel="noreferrer">+90 552 164 38 55</a></li>
-              <li><span className="text-white">Mahmut Sibal:</span> <a className="text-brand-300 hover:underline" href="https://wa.me/905368983855" target="_blank" rel="noreferrer">+90 536 898 38 55</a></li>
-              <li><span className="text-white">Yildiz Ucucu:</span> <a className="text-brand-300 hover:underline" href="https://wa.me/905353097436" target="_blank" rel="noreferrer">+90 535 309 74 36</a></li>
+              <li><span className="text-white">Genel WhatsApp (İşletme):</span> <a className="text-brand-300 hover:underline" href={`https://wa.me/${BUSINESS_WHATSAPP}`} target="_blank" rel="noreferrer">+90 552 164 38 55</a></li>
+              <li><span className="text-white">Mahmut Sibal (WhatsApp):</span> <a className="text-brand-300 hover:underline" href={`https://wa.me/${BUSINESS_WHATSAPP}`} target="_blank" rel="noreferrer">+90 552 164 38 55</a></li>
+              <li><span className="text-white">Yıldız Uçucu (WhatsApp):</span> <a className="text-brand-300 hover:underline" href={`https://wa.me/${BUSINESS_WHATSAPP}`} target="_blank" rel="noreferrer">+90 552 164 38 55</a></li>
+              <li><span className="text-white">Muhammet Öner (Tel):</span> <a className="text-brand-300 hover:underline" href="tel:+905461532118" rel="noreferrer">{MUHAMMET_TEL}</a></li>
               <li><span className="text-white">E-posta:</span> info@yildiztech.com (örnek)</li>
               <li><span className="text-white">LinkedIn:</span> /company/yildiztech</li>
               <li><span className="text-white">GitHub:</span> /yildiztech</li>

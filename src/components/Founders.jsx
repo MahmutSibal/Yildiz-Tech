@@ -4,6 +4,9 @@ import mahmutImg from '../../Photos/mahmut.jpeg';
 import muhhametImg from '../../Photos/muhhamet.jpeg';
 import yildizImg from '../../Photos/yıldız.jpeg';
 
+// Tüm WhatsApp yönlendirmeleri işletme numarasına sabitlendi
+const BUSINESS_WHATSAPP = '905521643855';
+
 const founders = [
   {
     name: 'Mahmut Sibal',
@@ -54,7 +57,7 @@ const Founders = () => {
               <p className="mt-4 text-gray-300 text-sm leading-relaxed">{f.bio}</p>
               <div className="mt-4 flex flex-wrap items-center gap-3 text-xs">
                 <a href={`mailto:${f.email}`} className="px-3 py-1.5 rounded-md bg-white/5 border border-white/10 hover:border-brand-400 transition">E-posta</a>
-                <a href={`https://wa.me/${f.phone.replace(/\D/g,'')}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-brand-500/10 border border-brand-500/40 text-brand-300 hover:bg-brand-500/20 transition">WhatsApp</a>
+                <a href={`https://wa.me/${BUSINESS_WHATSAPP}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-brand-500/10 border border-brand-500/40 text-brand-300 hover:bg-brand-500/20 transition">WhatsApp</a>
                 <a href={f.linkedin} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-white/5 border border-white/10 hover:border-brand-400 transition">LinkedIn</a>
                 <a href={f.github} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md bg-white/5 border border-white/10 hover:border-brand-400 transition">GitHub</a>
               </div>
